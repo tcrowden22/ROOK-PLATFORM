@@ -1,0 +1,34 @@
+{
+  "name": "@rook/gateway",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Rook API Gateway - External-facing service for agent data ingestion",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@fastify/helmet": "^11.1.1",
+    "@fastify/rate-limit": "^9.1.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.33.0",
+    "fastify": "^4.26.2",
+    "pg": "^8.11.3",
+    "pino": "^9.4.0",
+    "pino-pretty": "^11.2.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/pg": "^8.11.0",
+    "eslint": "^9.9.1",
+    "tsx": "^4.7.1",
+    "typescript": "^5.5.3"
+  }
+}
+

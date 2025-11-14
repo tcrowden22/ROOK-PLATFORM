@@ -1,0 +1,19 @@
+# Development Dockerfile for Gateway
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Install dependencies
+COPY package*.json ./
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Expose port
+EXPOSE 35000
+
+# Run in development mode with watch
+CMD ["npm", "run", "dev"]
+
+
