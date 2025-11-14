@@ -6,6 +6,9 @@ node_modules/
 # Testing
 coverage/
 *.log
+test-*.js
+test-*.html
+test-*.ts
 
 # Next.js
 .next/
