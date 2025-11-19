@@ -48,6 +48,7 @@ if ! gcloud sql instances describe $DB_INSTANCE_NAME --project $PROJECT_ID &>/de
     # echo ""
     gcloud sql instances create $DB_INSTANCE_NAME \
         --database-version=POSTGRES_16 \
+        --edition=ENTERPRISE \
         --cpu=2 --memory=4GiB \
         --region=$REGION \
         --root-password=$DB_ROOT_PASSWORD \
