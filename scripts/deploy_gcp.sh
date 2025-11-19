@@ -97,6 +97,7 @@ gcloud run deploy rook-api \
     --image $REGION-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/rook-api \
     --region $REGION \
     --allow-unauthenticated \
+    --port 3000 \
     --set-env-vars="DATABASE_URL=postgresql://$DB_USER:$DB_USER_PASSWORD@localhost/$DB_NAME?host=/cloudsql/$DB_CONNECTION_NAME" \
     --set-env-vars="API_PORT=3000" \
     --set-env-vars="CORS_ORIGIN=*" \
